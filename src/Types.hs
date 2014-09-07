@@ -48,13 +48,13 @@ text64 t
 
 -- aeson instances
 instance FromJSON (AppValidation Bool) where
-  parseJSON = withBool "Bool" $ \b -> pure . pure $ b
+  parseJSON = withBool "Bool" $ pure . pure
 
 instance FromJSON (AppValidation Text32) where
-  parseJSON = withText "Text32" $ \t -> pure . text32 $ t
+  parseJSON = withText "Text32" $ pure . text32
 
 instance FromJSON (AppValidation Text64) where
-  parseJSON = withText "Text64" $ \t -> pure . text64 $ t
+  parseJSON = withText "Text64" $ pure . text64
 
 -- aeson helper for [f a] -> f [a]
 withArraySequenceA :: (FromJSON (f a), Applicative f) => String -> Value -> Parser (f [a])
