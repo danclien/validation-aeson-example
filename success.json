@@ -1,0 +1,11 @@
+{
+  "title": "Grocery List",
+  "owner": {
+    "name": "Bob Smith"
+  },
+  "items": [
+    { "description": "Apples", "completed": true },
+    { "description": "Oranges", "completed": false },
+    { "description": "Pears", "completed": true }
+  ]
+}
